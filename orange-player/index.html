@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AmplitudeJS Testing</title>
+		<!-- Include Resource Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="../css/support.min.css"/>
+
+		<!--
+			Include Resource Javascript
+
+			NOTE: These are for handling things outside of the scope of AmplitudeJS
+		-->
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/support.min.js"></script>
+
+		<!-- Include Amplitude JS -->
+		<script type="text/javascript" src="../dist/amplitude.js"></script>
+
+		<!--
+			Include UX functions JS
+
+			NOTE: These are for handling things outside of the scope of AmplitudeJS
+		-->
+		<script type="text/javascript" src="../orange-player/js/functions.js"></script>
+
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="../orange-player/css/styles.css"/>
+	</head>
+	<body>
+		<div class="row">
+			<div class="large-8 medium-10 small-11 large-centered medium-centered small-centered columns" id="amplitude-player">
+				<div class="row">
+					<div class="large-6 medium-6 small-12 columns" id="amplitude-left">
+						<img amplitude-song-info="cover_art_url" amplitude-main-song-info="true"/>
+						<div id="player-left-bottom">
+							<div id="time-container">
+								<span class="current-time">
+									<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+								</span>
+								<input type="range" class="amplitude-song-slider" amplitude-main-song-slider="true" step=".1"/>
+								<span class="duration">
+									<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</span>
+							</div>
+
+							<div id="control-container">
+								<div id="repeat-container">
+									<div class="amplitude-repeat" id="repeat"></div>
+								</div>
+
+								<div id="central-control-container">
+									<div id="central-controls">
+										<div class="amplitude-prev" id="previous"></div>
+										<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+										<div class="amplitude-next" id="next"></div>
+									</div>
+								</div>
+
+								<div id="shuffle-container">
+									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+								</div>
+							</div>
+
+							<div id="meta-container">
+								<span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+
+								<div class="song-artist-album">
+									<span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+									<span amplitude-song-info="album" amplitude-main-song-info="true"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="large-6 medium-6 small-12 columns" id="amplitude-right">
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">radiokantipur.ekantipur.com</span>
+								<span class="song-artist">i) Kantipur FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.aaganfm.com.np</span>
+								<span class="song-artist">ii) Aagan FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.radioannapurnanepal.com</span>
+								<span class="song-artist">iii) Annapurna Radio</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">Sorry; No Web Info</span>
+								<span class="song-artist">iv) AOne FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="4">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.radioapostle.com.np</span>
+								<span class="song-artist">v) Apostle FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="5">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.fmbig.com</span>
+								<span class="song-artist">vi) Big Fm</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="6">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.eaglefm.com.np</span>
+								<span class="song-artist">vii) Eagle FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="7">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.friendsfm.com.np</span>
+								<span class="song-artist">viii) Friends FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="8">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.hajurkoradio.org.np</span>
+								<span class="song-artist">ix) Hajurko FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="9">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.hitsfm.com.np</span>
+								<span class="song-artist">x) Hits FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="10">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.ilamfm.org</span>
+								<span class="song-artist">xi) Ilam FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="11">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.imagefm.com.np</span>
+								<span class="song-artist">xii) Image FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+						<div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="12">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.keepsfm.com</span>
+								<span class="song-artist">xiii) Keeps FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="13">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.lokpriyaradio.com</span>
+								<span class="song-artist">xiv) Lokpriya FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="14">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.nfm.com.np</span>
+								<span class="song-artist">xv) Nepal FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="15">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.imagefm.com.np</span>
+								<span class="song-artist">xvi) Image FM</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="16">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.aradioaudio.com</span>
+								<span class="song-artist">xvii) Radio Audio</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="17">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.radiobirat.com.np</span>
+								<span class="song-artist">xviii) Radio Birat</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="18">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.derby.com.np</span>
+								<span class="song-artist">xix) Radio Derby</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+
+                                                <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="19">
+							<div class="song-now-playing-icon-container">
+								<div class="play-button-container">
+
+								</div>
+								<img class="now-playing" src="img/now-playing.svg"/>
+							</div>
+							<div class="song-meta-data">
+								<span class="song-title">www.radiohimalaya.com</span>
+								<span class="song-artist">xx) Radio Himalaya</span>
+							</div>
+							
+								<img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+								<img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		Amplitude.init({
+			"songs": [
+				{
+					"name": "Risin' High (feat Raashan Ahmad)",
+					"artist": "Ancient Astronauts",
+					"album": "We Are to Answer",
+					"url": "http://broadcast.radiokantipur.com:7248/stream",
+					"cover_art_url": "../album-pic/kant.png"
+				},
+				{
+					"name": "The Gun",
+					"artist": "Lorn",
+					"album": "Ask The Dust",
+					"url": "http://live.itech.host:8274/stream",
+					"cover_art_url": "../album-pic/aagf.png"
+				},
+				{
+					"name": "Anvil",
+					"artist": "Lorn",
+					"album": "Anvil",
+					"url": "http://streaming.softnep.net:8091/;stream.mp3",
+					"cover_art_url": "../album-pic/anpf.png"
+				},
+				{
+					"name": "I Came Running",
+					"artist": "Ancient Astronauts",
+					"album": "We Are to Answer",
+					"url": "http://192.190.84.25:9306/;",
+					"cover_art_url": "../album-pic/aonf.png"
+				},
+				{
+					"name": "First Snow",
+					"artist": "Emancipator",
+					"album": "Soon It Will Be Cold Enough",
+					"url": "http://streaming.hamropatro.com:8176/;",
+					"cover_art_url": "../album-pic/apsf.png"
+				},
+				{
+					"name": "Terrain",
+					"artist": "pg.lost",
+					"album": "Key",
+					"url": "http://50.7.99.163:16118/stream",
+					"cover_art_url": "../album-pic/bigf.png"
+				},
+				{
+					"name": "Vorel",
+					"artist": "Russian Circles",
+					"album": "Guidance",
+					"url": "../songs/Vorel-RussianCircles.mp3",
+					"cover_art_url": "../album-art/guidance.jpg"
+				},
+				{
+					"name": "Intro / Sweet Glory",
+					"artist": "Jimkata",
+					"album": "Die Digital",
+					"url": "../songs/IntroSweetGlory-Jimkata.mp3",
+					"cover_art_url": "../album-art/die-digital.jpg"
+				},
+				{
+					"name": "Offcut #6",
+					"artist": "Little People",
+					"album": "We Are But Hunks of Wood Remixes",
+					"url": "../songs/Offcut6-LittlePeople.mp3",
+					"cover_art_url": "../album-art/we-are-but-hunks-of-wood.jpg"
+				},
+				{
+					"name": "Dusk To Dawn",
+					"artist": "Emancipator",
+					"album": "Dusk To Dawn",
+					"url": "../songs/DuskToDawn-Emancipator.mp3",
+					"cover_art_url": "../album-art/from-dusk-to-dawn.jpg"
+				},
+				{
+					"name": "Anthem",
+					"artist": "Emancipator",
+					"album": "Soon It Will Be Cold Enough",
+					"url": "../songs/Anthem-Emancipator.mp3",
+					"cover_art_url": "../album-art/soon-it-will-be-cold-enough.jpg"
+				}
+			]
+		});
+
+	</script>
+</html>
