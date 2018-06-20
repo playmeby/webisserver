@@ -180,11 +180,11 @@ div#amplitude-left div#player-left-bottom div#control-container	div#repeat-conta
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#repeat-container div#repeat.amplitude-repeat-off{
-	background: url('../img/repeat-off.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/repeat-off.svg');
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#repeat-container div#repeat.amplitude-repeat-on{
-	background: url('../img/repeat-on.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/repeat-on.svg');
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#central-control-container{
@@ -202,7 +202,7 @@ div#amplitude-left div#player-left-bottom div#control-container	div#central-cont
 	width: 40px;
 	height: 40px;
 	cursor: pointer;
-	background: url('../img/prev.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/prev.svg');
 	background-repeat: no-repeat;
 	float: left;
 	margin-top: 10px;
@@ -218,11 +218,11 @@ div#amplitude-left div#player-left-bottom div#control-container	div#central-cont
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#central-control-container div#central-controls div#play-pause.amplitude-paused{
-	background: url('../img/play.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/play.svg');
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#central-control-container div#central-controls div#play-pause.amplitude-playing{
-	background: url('../img/pause.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/pause.svg');
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#central-control-container div#central-controls div#next{
@@ -230,7 +230,7 @@ div#amplitude-left div#player-left-bottom div#control-container	div#central-cont
 	width: 40px;
 	height: 40px;
 	cursor: pointer;
-	background: url('../img/next.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/next.svg');
 	background-repeat: no-repeat;
 	float: left;
 	margin-top: 10px;
@@ -250,11 +250,11 @@ div#amplitude-left div#player-left-bottom div#control-container	div#shuffle-cont
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#shuffle-container div#shuffle.amplitude-shuffle-off{
-	background: url('../img/shuffle-off.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/shuffle-off.svg');
 }
 
 div#amplitude-left div#player-left-bottom div#control-container	div#shuffle-container div#shuffle.amplitude-shuffle-on{
-	background: url('../img/shuffle-on.svg');
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/shuffle-on.svg');
 }
 
 div#amplitude-left div#player-left-bottom div#control-container:after{
@@ -317,14 +317,14 @@ div#amplitude-right	div.song div.song-now-playing-icon-container img.now-playing
 			
 div#amplitude-right	div.song div.play-button-container{
 	display: none;
-	background: url('../img/list-play-light.png') no-repeat;
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/list-play-light.png') no-repeat;
 	width: 22px;
 	height: 22px;
 	margin-top: 10px;
 }
 
 div#amplitude-right	div.song div.play-button-container:hover{
-	background: url('../img/list-play-hover.png') no-repeat;
+	background: url('https://github.com/playmeby/webisserver/blob/master/orange-player/img/list-play-hover.png') no-repeat;
 }
 
 div#amplitude-right	div.song.amplitude-active-song-container div.song-now-playing-icon-container img.now-playing{
